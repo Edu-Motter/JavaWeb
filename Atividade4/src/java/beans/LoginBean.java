@@ -19,7 +19,7 @@ public class LoginBean {
 
      @Override
     public String toString() {
-        return "LoginBean{" + "id=" + id + ", nome=" + nome + '}';
+        return "Usuário : " + nome ;
     }
 
     public int getId() {

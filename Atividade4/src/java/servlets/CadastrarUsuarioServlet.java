@@ -79,7 +79,7 @@ public class CadastrarUsuarioServlet extends HttpServlet {
                 out.println("<body>");
                 out.println("<h1>Usuário Cadastrado com Sucesso</h1>");
                 //Aqui ira ser a Portal! Não PortalServlet 
-                out.println("<p><a href=" + getServletContext().getContextPath() + "/PortalServlet" + ">PortalServlet</a></p>");
+                out.println("<p><a href=" + getServletContext().getContextPath() + "/portal.jsp" + ">Portal</a></p>");
                 out.println("</body>");
                 out.println("</html>");
             }
@@ -94,7 +94,7 @@ public class CadastrarUsuarioServlet extends HttpServlet {
             request.setAttribute("msg",msg);
             request.setAttribute("page","index.html");
             RequestDispatcher rd = getServletContext().
-            getRequestDispatcher("/ErroServlet");
+            getRequestDispatcher("/erro.jsp");
             rd.forward(request, response);           
         }
         

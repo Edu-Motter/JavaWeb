@@ -19,7 +19,7 @@
                 request.setAttribute("msg",msg);
                 request.setAttribute("page","index.html");
                 RequestDispatcher rd = getServletContext().
-                getRequestDispatcher("/ErroServlet");
+                getRequestDispatcher("/erro.jsp ");
                 rd.forward(request, response);           
             }
             else {
@@ -34,7 +34,7 @@
             <br/>Usuario:<input type="text" name="login"/>
             <br/>Senha:<input type="text" name="senha"/>
         
-            <input type="submit" value="Salvar"/>
+            <input type="submit" value="Salvar"/>   
         </form>
     </body>
 </html>

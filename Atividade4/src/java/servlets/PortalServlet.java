@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import classes.MyBean;
 import classes.Usuario;
 import dao.PessoaDAO;
 import java.io.IOException;
@@ -40,7 +41,8 @@ public class PortalServlet extends HttpServlet {
 PrintWriter out = response.getWriter();
         response.setContentType("text/html;charset=UTF-8");
         
-        HttpSession session = request.getSession ();
+        HttpSession session = request.getSession();
+        MyBean myBean = (MyBean) session.getAttribute("myBean");
         String logado = (String) session.getAttribute("logado");
         out.print(logado);
         String msg= "Página Indisponível, favor logar.";

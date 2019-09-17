@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import beans.ConfigBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletConfig;
@@ -24,9 +25,11 @@ public class StartupServlet extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException{
            ServletContext ctx = config.getServletContext();
-           
+            
            //USAR O CONFIGBEAN
-           ctx.setAttribute("configuracao","nada ainda");
+          ConfigBean email = new ConfigBean();
+          email.setEmail("sitebolado@gmail.com");
+           ctx.setAttribute("configuracao", email);
         }
     
     

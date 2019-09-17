@@ -20,7 +20,7 @@ public class ConnectionFactory {
                 Class.forName("org.postgresql.Driver");
                 return DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/JavaWeb",
-                "postgres", "1504");
+                "postgres", "meg");
             }
             catch(SQLException e) {
                 throw new RuntimeException(e);

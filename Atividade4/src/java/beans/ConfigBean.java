@@ -13,7 +13,7 @@ public class ConfigBean {
     private String email;
     
     public ConfigBean() {
-        this.email = "Vazio";
+        
     }
 
     public String getEmail() {
